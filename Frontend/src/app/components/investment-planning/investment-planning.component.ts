@@ -34,6 +34,27 @@ export class InvestmentPlanningComponent implements OnInit {
   }
 
   handleInputChange(event: any): void {
-    // write your logic here 
+    // write your logic here
+  }
+
+  isCreateButtonDisabled(): boolean {
+    // write your logic here
+    return false;
+  }
+
+  handleCreateInvestment(): void {
+    // write your logic here
+  }
+
+  handleUpdateInvestment(): void {
+    // write your logic here
+  }
+
+  handleEditInvestment(id: number): void {
+    // write your logic here
+  }
+
+  handleDeleteInvestment(id: number): void {
+    // write your logic here
   }
 }
