@@ -23,15 +23,8 @@ namespace InvestmentManagement.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> CreateInvestment([FromBody] Investment model)
         {
-            var InvestmentExists = await _investmentService.GetInvestmentById(model.InvestmentId);
-            if (InvestmentExists != null)
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Investment already exists!" });
-            var result = await _investmentService.CreateInvestment(model);
-            if (result == null)
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Investment creation failed! Please check details and try again." });
-
-            return Ok(new Response { Status = "Success", Message = "Investment created successfully!" });
-
+            //write your code here
+            throw new NotImplementedException();
         }
 
 
@@ -39,34 +32,16 @@ namespace InvestmentManagement.Controllers
         [Route("update-investment")]
         public async Task<IActionResult> UpdateInvestment([FromBody] InvestmentViewModel model)
         {
-            var Investment = await _investmentService.UpdateInvestment(model);
-            if (Investment == null)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response
-                { Status = "Error", Message = $"Investment With Id = {model.InvestmentId} cannot be found" });
-            }
-            else
-            {
-                var result = await _investmentService.UpdateInvestment(model);
-                return Ok(new Response { Status = "Success", Message = "Investment updated successfully!" });
-            }
+            //write your code here
+            throw new NotImplementedException();
         }
 
         [HttpDelete]
         [Route("delete-Investment")]
         public async Task<IActionResult> DeleteInvestment(long id)
         {
-            var Investment = await _investmentService.GetInvestmentById(id);
-            if (Investment == null)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response
-                { Status = "Error", Message = $"Investment With Id = {id} cannot be found" });
-            }
-            else
-            {
-                var result = await _investmentService.DeleteInvestmentById(id);
-                return Ok(new Response { Status = "Success", Message = "Investment deleted successfully!" });
-            }
+            //write your code here
+            throw new NotImplementedException();
         }
 
 
@@ -74,23 +49,16 @@ namespace InvestmentManagement.Controllers
         [Route("get-Investment-by-id")]
         public async Task<IActionResult> GetInvestmentById(long id)
         {
-            var Investment = await _investmentService.GetInvestmentById(id);
-            if (Investment == null)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response
-                { Status = "Error", Message = $"Investment With Id = {id} cannot be found" });
-            }
-            else
-            {
-                return Ok(Investment);
-            }
+            //write your code here
+            throw new NotImplementedException();
         }
 
         [HttpGet]
         [Route("get-all-investments")]
         public async Task<IEnumerable<Investment>> GetAllInvestments()
         {
-            return _investmentService.GetAllInvestments();
+            //write your code here
+            throw new NotImplementedException();
         }
     }
 }
