@@ -20,27 +20,32 @@ namespace InvestmentManagement.BusinessLayer.Services
 
         public async Task<Investment> CreateInvestment(Investment investment)
         {
-            return await _investmentRepository.CreateInvestment(investment);
+            //write your code here
+            throw new NotImplementedException();
         }
 
         public async Task<bool> DeleteInvestmentById(long id)
         {
-            return await _investmentRepository.DeleteInvestmentById(id);
+            //write your code here
+            throw new NotImplementedException();
         }
 
         public List<Investment> GetAllInvestments()
         {
-            return _investmentRepository.GetAllInvestments();
+            //write your code here
+            throw new NotImplementedException();
         }
 
         public async Task<Investment> GetInvestmentById(long id)
         {
-            return await _investmentRepository.GetInvestmentById(id);
+            //write your code here
+            throw new NotImplementedException();
         }
 
         public async Task<Investment> UpdateInvestment(InvestmentViewModel model)
         {
-            return await _investmentRepository.UpdateInvestment(model);
+            //write your code here
+            throw new NotImplementedException();
         }
     }
 }
